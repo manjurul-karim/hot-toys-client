@@ -1,22 +1,23 @@
 import { Avatar, Dropdown, Navbar } from "flowbite-react";
 import { NavbarLink } from "flowbite-react/lib/esm/components/Navbar/NavbarLink";
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import logo from '../../../assets/toys-garden.jpg'
 
 const NavBar = () => {
   return (
     <div>
       <Navbar fluid={true} rounded={true}>
-        <Navbar.Brand href="https://flowbite.com/">
+        <Link className="flex" to="/">
           <img
-            src="https://flowbite.com/docs/images/logo.svg"
+            src={logo}
             className="mr-3 h-6 sm:h-9"
-            alt="Flowbite Logo"
+            alt="Hot toys Logo"
           />
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-            Hot Toys
+            Toys Garden
           </span>
-        </Navbar.Brand>
+        </Link>
         <div className="flex md:order-2">
           <Dropdown
             arrowIcon={false}
@@ -44,7 +45,7 @@ const NavBar = () => {
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
-          <NavLink to="/" active={true}>
+          <NavLink to="/" active='true'>
             Home
           </NavLink>
           <NavLink to="/alltoys">All Toys</NavLink>

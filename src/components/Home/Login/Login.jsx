@@ -2,8 +2,10 @@ import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
 import React from "react";
 import { Link } from "react-router-dom";
 import { BsGoogle } from "react-icons/bs";
+import useTitle from "../../../hooks/useTitle";
 
 const Login = () => {
+    useTitle('Login')
   return (
     <div className="flex justify-center">
       <div className="max-w-sm ">
@@ -37,8 +39,13 @@ const Login = () => {
               Or LogIn With
             </h2>
             <div className="flex justify-center my-4">
-              <Button className="w-full" outline={true} gradientDuoTone="greenToBlue">
-                <BsGoogle className="mr-8"></BsGoogle> <span className="text-xl hover:text-red-500">Google</span>
+              <Button
+                className="w-full"
+                outline={true}
+                gradientDuoTone="greenToBlue"
+              >
+                <BsGoogle className="mr-8"></BsGoogle>{" "}
+                <span className="text-xl hover:text-red-500">Google</span>
               </Button>
             </div>
             <h4 className="font-md text-md">
