@@ -3,17 +3,14 @@ import { Outlet } from "react-router-dom";
 import NavBar from "../components/Shared/NavBar/NavBar";
 import FooterSection from "../components/Shared/FooterSection/FooterSection";
 
-
-
 const Main = () => {
   return (
-    <div>
+    <div className="">
       <NavBar></NavBar>
-     <div className='min-h-[calc(100vh-136px)]'>
+      <div className="min-h-[calc(100vh-136px)]">
         <Outlet></Outlet>
-     </div>
+      </div>
       <FooterSection></FooterSection>
-    
     </div>
   );
 };

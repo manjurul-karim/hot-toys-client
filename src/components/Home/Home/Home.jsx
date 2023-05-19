@@ -5,11 +5,13 @@ const Home = () => {
 
     useTitle('Home')
   return (
-    <div>
-      <h2 className="bg-red-500 text-4xl font-bold text-center text-white">
+    <div className="bg-[#1C3F3A]">
+      <h2 className=" text-4xl font-bold text-center text-white">
+      
         {" "}
         This Is Home!!!!!
       </h2>
+     
     </div>
   );
 };
