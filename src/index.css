@@ -15,7 +15,7 @@
 } */
 
 .active {
-  @apply  tracking-wide text-blue-700 transition-colors duration-200 hover:text-blue-400 underline font-bold;
+  @apply tracking-wide text-blue-700 transition-colors duration-200 hover:text-blue-400 underline font-bold;
 }
 
 .default {
