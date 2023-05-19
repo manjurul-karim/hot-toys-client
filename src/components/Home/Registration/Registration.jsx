@@ -1,16 +1,54 @@
 import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
-import React from "react";
+import React, { useContext, useState } from "react";
 import { BsGoogle } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import useTitle from "../../../hooks/useTitle";
+import { authContext } from "../../../providers/AuthProvider";
 
 const Registration = () => {
-    useTitle('Register')
+  useTitle("Register");
+
+  const { user, createUser } = useContext(authContext);
+  // console.log(createUser);
+  const [accpted, setAccepted] = useState(false);
+  const [sucess, setSucess] = useState("");
+  const [error, setError] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleRegister = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    const photoUrl = form.photoUrl.value;
+    console.log(name, email, password , photoUrl);
+
+    createUser(email, password)
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        // ! validation
+        if (!/(?=.*[0-9])/.test(password)) {
+          setError("please enter number");
+        } else if (password.length < 6) {
+          setError("please set at least 6 character");
+        }
+        setError(" ");
+        form.reset();
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  };
+  const handleAccepted = (event) => {
+    setAccepted(event.target.checked);
+  };
   return (
     <div className="flex justify-center">
       <div className="max-w-sm">
         <Card>
-          <form className="flex flex-col gap-4">
+          <form onSubmit={handleRegister} className="flex flex-col gap-4">
             <div>
               <div className="mb-2 block">
                 <Label htmlFor="name1" value="Your Name" />

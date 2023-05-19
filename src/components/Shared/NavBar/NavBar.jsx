@@ -1,14 +1,19 @@
 import { Avatar, Button, Dropdown, Navbar, Tooltip } from "flowbite-react";
-import { NavbarLink } from "flowbite-react/lib/esm/components/Navbar/NavbarLink";
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/toys-garden.jpg";
-import { FaUserCircle } from "react-icons/fa";
 import { authContext } from "../../../providers/AuthProvider";
 import { useContext } from "react";
 
 const NavBar = () => {
-  const { user } = useContext(authContext);
+  const { user, logedOut } = useContext(authContext);
+
+  const handleLogedOut = () => {
+    logedOut()
+      .then(() => {})
+      .catch((error) => console.error(error));
+  };
+
   return (
     <div className=" bg-[bg-[#1C3F3A]]">
       <Navbar fluid={true} rounded={true}>
@@ -51,13 +56,12 @@ const NavBar = () => {
               <>
                 <div>
                   <Tooltip content={user.displayName} placement="left">
-                     <span>
+                    <span>
                       <img
                         className="h-10 w-10 rounded-full"
                         src={user.photoURL}
                         alt=""
                       />
-                      
                     </span>
                   </Tooltip>
                   {/* <div
@@ -73,16 +77,14 @@ const NavBar = () => {
                     </span>
                   </div> */}
                 </div>
-                <button className="btn btn-sm btn-outline btn-primary lowercase">
-                  signOut
-                </button>
+                <button onClick={handleLogedOut}>signOut</button>
               </>
             ) : (
               <NavLink
                 to="/login"
                 // className={({ isActive }) => (isActive ? "active" : "default")}
               >
-                login
+                Login
               </NavLink>
             )}
           </NavLink>
