@@ -1,35 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { Button } from "flowbite-react";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="flex flex-wrap gap-2">
+        <div>
+          <Button gradientMonochrome="info">Info</Button>
+        </div>
+        <div>
+          <Button gradientMonochrome="success">Success</Button>
+        </div>
+        <div>
+          <Button gradientMonochrome="cyan">Cyan</Button>
+        </div>
+        <div>
+          <Button gradientMonochrome="teal">Teal</Button>
+        </div>
+        <div>
+          <Button gradientMonochrome="lime">Lime</Button>
+        </div>
+        <div>
+          <Button gradientMonochrome="failure">Failure</Button>
+        </div>
+        <div>
+          <Button gradientMonochrome="pink">Pink</Button>
+        </div>
+        <div>
+          <Button gradientMonochrome="purple">Purple</Button>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
