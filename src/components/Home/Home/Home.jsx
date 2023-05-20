@@ -6,7 +6,7 @@ import CarToys from "./carToys";
 import FeatureOne from "../ExtraSection/FeatureOne";
 import Tabs from "../CategoryTab/CategoryTab";
 import CategoryTab from "../CategoryTab/CategoryTab";
-import HeaderBanner from "../Banner/HeaderBanner";
+
 
 const Home = () => {
   const [toys, setToys] = useState([]);
@@ -21,7 +21,6 @@ const Home = () => {
   useTitle("Home");
   return (
     <div className="">
-      <HeaderBanner></HeaderBanner>
       <Banner></Banner>
       <div>
         <div>
