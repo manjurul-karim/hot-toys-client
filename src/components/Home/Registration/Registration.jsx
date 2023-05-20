@@ -45,8 +45,8 @@ const Registration = () => {
     setAccepted(event.target.checked);
   };
   return (
-    <div className="flex justify-center">
-      <div className="max-w-sm">
+    <div className="flex justify-center bg-gray-50 my-6">
+      <div className="max-w-sm flex">
         <Card className="bg-gradient-to-r from-cyan-500 to-blue-500">
           <form onSubmit={handleRegister} className="flex flex-col gap-4">
             <div>

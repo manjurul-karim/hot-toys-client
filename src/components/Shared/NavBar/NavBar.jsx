@@ -89,7 +89,7 @@ const NavBar = () => {
               </NavLink>
             )}
           </Link>
-         
+
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
@@ -99,8 +99,6 @@ const NavBar = () => {
           <NavLink to="/alltoys">All Toys</NavLink>
           <NavLink to="/mytoys">My toys</NavLink>
           <NavLink to="/addtoys">Add a Toys</NavLink>
-          <NavLink to="/login">Login</NavLink>
-          <NavLink to="/register">Register</NavLink>
           <NavLink to="/blog">Blog</NavLink>
         </Navbar.Collapse>
       </Navbar>

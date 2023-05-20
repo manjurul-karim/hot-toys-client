@@ -51,8 +51,8 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center">
-      <div className="max-w-sm ">
+    <div className="flex justify-center bg-gray-50 h-screen ">
+      <div className="max-w-sm mt-12 ">
         <Card className="bg-gradient-to-r from-cyan-500 to-blue-500">
           <form onSubmit={handleLogIn} className="flex flex-col gap-4">
             <div>
