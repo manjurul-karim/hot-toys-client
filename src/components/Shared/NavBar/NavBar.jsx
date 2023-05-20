@@ -27,13 +27,13 @@ const NavBar = () => {
           {/* <Dropdown
             arrowIcon={false}
             inline={true}
-            
+
             label={
-              
+
               <Avatar
                 alt="User settings"
                 img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
-                
+
                 rounded={true}
               />
             }
@@ -43,7 +43,7 @@ const NavBar = () => {
               <span className="block truncate text-sm font-medium">
                 name@flowbite.com
               </span>
-              
+
             </Dropdown.Header>
             <Dropdown.Item>Dashboard</Dropdown.Item>
             <Dropdown.Item>Settings</Dropdown.Item>
@@ -51,7 +51,8 @@ const NavBar = () => {
             <Dropdown.Divider />
             <Dropdown.Item>Sign out</Dropdown.Item>
           </Dropdown> */}
-          <NavLink className="flex gap-2">
+
+          <Link className="flex gap-2">
             {user ? (
               <>
                 <div>
@@ -65,7 +66,7 @@ const NavBar = () => {
                     </span>
                   </Tooltip>
                   {/* <div
-                    
+
                     data-tip={user.displayName}
                   >
                     <span>
@@ -87,7 +88,8 @@ const NavBar = () => {
                 Login
               </NavLink>
             )}
-          </NavLink>
+          </Link>
+         
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
