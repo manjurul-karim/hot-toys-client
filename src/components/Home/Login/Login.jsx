@@ -53,7 +53,7 @@ const Login = () => {
   return (
     <div className="flex justify-center">
       <div className="max-w-sm ">
-        <Card>
+        <Card className="bg-gradient-to-r from-cyan-500 to-blue-500">
           <form onSubmit={handleLogIn} className="flex flex-col gap-4">
             <div>
               <div className="mb-2 block">
@@ -83,7 +83,9 @@ const Login = () => {
               <Checkbox id="remember" />
               <Label htmlFor="remember">Remember me</Label>
             </div>
-            <Button type="submit">Login</Button>
+            <Button outline={true} gradientDuoTone="greenToBlue" type="submit">
+              Login
+            </Button>
           </form>
           <div>
             <h2 className="text-center text-md font-semibold ">

@@ -22,7 +22,7 @@ const Registration = () => {
     const email = form.email.value;
     const password = form.password.value;
     const photoUrl = form.photoUrl.value;
-    console.log(name, email, password , photoUrl);
+    console.log(name, email, password, photoUrl);
 
     createUser(email, password)
       .then((result) => {
@@ -47,7 +47,7 @@ const Registration = () => {
   return (
     <div className="flex justify-center">
       <div className="max-w-sm">
-        <Card>
+        <Card className="bg-gradient-to-r from-cyan-500 to-blue-500">
           <form onSubmit={handleRegister} className="flex flex-col gap-4">
             <div>
               <div className="mb-2 block">
@@ -101,7 +101,9 @@ const Registration = () => {
               <Checkbox id="remember" />
               <Label htmlFor="remember">Remember me</Label>
             </div>
-            <Button type="submit">Registration</Button>
+            <Button outline={true} gradientDuoTone="greenToBlue" type="submit">
+              Registration
+            </Button>
           </form>
 
           <div>
