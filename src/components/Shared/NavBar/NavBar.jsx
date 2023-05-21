@@ -78,15 +78,15 @@ const NavBar = () => {
                     </span>
                   </div> */}
                 </div>
-                <button onClick={handleLogedOut}>signOut</button>
+                <button className="btn btn-outline capitalize" onClick={handleLogedOut}>signOut</button>
               </>
             ) : (
-              <NavLink
-                to="/login"
-                // className={({ isActive }) => (isActive ? "active" : "default")}
-              >
-                Login
-              </NavLink>
+              <button className="btn btn-outline capitalize"><NavLink
+              to="/login"
+              // className={({ isActive }) => (isActive ? "active" : "default")}
+            >
+              Login
+            </NavLink></button>
             )}
           </Link>
 

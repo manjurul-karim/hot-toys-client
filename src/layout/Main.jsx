@@ -5,7 +5,7 @@ import FooterSection from "../components/Shared/FooterSection/FooterSection";
 
 const Main = () => {
   return (
-    <div className="">
+    <div className="bg-[#E9F8FF]">
       <NavBar></NavBar>
       <div className="min-h-[calc(100vh-136px)]">
         <Outlet></Outlet>

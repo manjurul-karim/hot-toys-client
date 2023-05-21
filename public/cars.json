@@ -1,0 +1,85 @@
+[
+  {
+    "local_id": 1,
+    "title": "Speed Racer",
+    "categoryName": "racingCar",
+    "picture": "https://i.ibb.co/LSL93D1/banner1.jpg",
+    "price": 49.99,
+    "rating": 4.5,
+    "description": "Experience the thrill of high-speed racing with the Speed Racer car. This sleek and aerodynamic vehicle is built for maximum performance on the track."
+  },
+  {
+    "local_id": 2,
+    "title": "Turbo Boost",
+    "categoryName": "racingCar",
+    "picture": "https://i.ibb.co/QrvPCrQ/banner15.png",
+    "price": 59.99,
+    "rating": 4.2,
+    "description": "Get ready for the ultimate racing experience with the Turbo Boost car. Its powerful engine and advanced features make it a top choice for professional racers."
+  },
+  {
+    "local_id": 3,
+    "title": "Nitro Blaze",
+    "categoryName": "racingCar",
+    "picture": "https://i.ibb.co/bLbkq6h/banner10.jpg",
+    "price": 39.99,
+    "rating": 4.7,
+    "description": "Ignite the tracks with the Nitro Blaze car. With its blazing speed and sleek design, it's the perfect choice for those seeking an adrenaline rush."
+  },
+
+  {
+    "local_id": 4,
+    "title": "Rescue Hero",
+    "categoryName": "fireTruck",
+    "picture": "https://i.ibb.co/NWm7nPW/banner2.png",
+    "price": 39.99,
+    "rating": 4.3,
+    "description": "Save the day with the Rescue Hero fire truck. Equipped with extendable ladders and powerful water cannons, it's ready to tackle any firefighting mission."
+  },
+  {
+    "local_id": 5,
+    "title": "Fire Chief",
+    "categoryName": "fireTruck",
+    "picture": "https://i.ibb.co/w7MYZ08/banner8.png",
+    "price": 49.99,
+    "rating": 4.6,
+    "description": "Lead the firefighting team with the Fire Chief truck. Its advanced communication systems and state-of-the-art equipment make it a reliable choice in emergencies."
+  },
+  {
+    "local_id": 6,
+    "title": "Blaze Buster",
+    "categoryName": "fireTruck",
+    "picture": "https://i.ibb.co/9n1r9vd/fire-Truck3.jpg",
+    "price": 54.99,
+    "rating": 4.4,
+    "description": "Extinguish fires with the Blaze Buster fire truck. Its high-capacity water tank and specialized firefighting tools make it an essential asset for any rescue team."
+  },
+
+  {
+    "local_id": 7,
+    "title": "Patrol Enforcer",
+    "categoryName": "policeCar",
+    "picture": "https://i.ibb.co/mFj5s60/banner13.jpg",
+    "price": 44.99,
+    "rating": 4.8,
+    "description": "Maintain law and order with the Patrol Enforcer police car. Its robust design and advanced security features make it the ideal choice for crime prevention."
+  },
+  {
+    "local_id": 8,
+    "title": "Interceptor",
+    "categoryName": "policeCar",
+    "picture": "https://i.ibb.co/gZNfGxz/banner3.jpg",
+    "price": 64.99,
+    "rating": 4.9,
+    "description": "Chase down criminals with the Interceptor police car. Its high-speed capabilities and advanced pursuit technology ensure no lawbreaker can escape."
+  },
+  {
+    "local_id": 9,
+    "title": "Patrol Cruiser",
+    "categoryName": "policeCar",
+    "picture": "https://i.ibb.co/0m9RQwS/police-Car3.png",
+    "price": 54.99,
+    "rating": 4.7,
+    "description": "Keep the streets safe with the Patrol Cruiser police car. Its reliable performance and cutting-edge features make it a trusted choice for law enforcement agencies."
+  }
+]

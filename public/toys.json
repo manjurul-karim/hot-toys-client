@@ -1,66 +1,65 @@
 [
   {
-    "toys": {
-      "sports-car": [
-        {
-          "picture": "sports-car1.jpg",
-          "name": "Sports Car 1",
-          "price": 29.99,
-          "rating": 4.5
-        },
-        {
-          "picture": "sports-car2.jpg",
-          "name": "Sports Car 2",
-          "price": 19.99,
-          "rating": 4.0
-        },
-        {
-          "picture": "sports-car3.jpg",
-          "name": "Sports Car 3",
-          "price": 24.99,
-          "rating": 4.2
-        }
-      ],
-      "fire-truck": [
-        {
-          "picture": "fire-truck1.jpg",
-          "name": "Fire Truck 1",
-          "price": 39.99,
-          "rating": 4.7
-        },
-        {
-          "picture": "fire-truck2.jpg",
-          "name": "Fire Truck 2",
-          "price": 34.99,
-          "rating": 4.3
-        },
-        {
-          "picture": "fire-truck3.jpg",
-          "name": "Fire Truck 3",
-          "price": 29.99,
-          "rating": 4.6
-        }
-      ],
-      "police-car": [
-        {
-          "picture": "police-car1.jpg",
-          "name": "Police Car 1",
-          "price": 27.99,
-          "rating": 4.1
-        },
-        {
-          "picture": "police-car2.jpg",
-          "name": "Police Car 2",
-          "price": 32.99,
-          "rating": 4.4
-        },
-        {
-          "picture": "police-car3.jpg",
-          "name": "Police Car 3",
-          "price": 22.99,
-          "rating": 3.9
-        }
-      ]
-    }
+    "picture": "sports-car1.jpg",
+    "category": "sports-car",
+    "name": "Sports Car 1",
+    "price": 29.99,
+    "rating": 4.5
+  },
+  {
+    "picture": "sports-car2.jpg",
+    "category": "sports-car",
+    "name": "Sports Car 2",
+    "price": 19.99,
+    "rating": 4.0
+  },
+  {
+    "picture": "sports-car3.jpg",
+    "category": "sports-car",
+    "name": "Sports Car 3",
+    "price": 24.99,
+    "rating": 4.2
+  },
+  {
+    "picture": "fire-truck1.jpg",
+    "category": "fire-truck",
+    "name": "Fire Truck 1",
+    "price": 39.99,
+    "rating": 4.7
+  },
+  {
+    "picture": "fire-truck2.jpg",
+    "category": "fire-truck",
+    "name": "Fire Truck 2",
+    "price": 34.99,
+    "rating": 4.3
+  },
+  {
+    "picture": "fire-truck3.jpg",
+    "category": "fire-truck",
+    "name": "Fire Truck 3",
+    "price": 29.99,
+    "rating": 4.6
+  },
+  {
+    "picture": "police-car1.jpg",
+    "category": "police-car",
+    "name": "Police Car 1",
+    "price": 27.99,
+    "rating": 4.1
+  },
+  {
+    "picture": "police-car2.jpg",
+    "category": "police-car",
+    "name": "Police Car 2",
+    "price": 32.99,
+    "rating": 4.4
+  },
+  {
+    "picture": "police-car3.jpg",
+    "category": "police-car",
+    "name": "Police Car 3",
+    "price": 22.99,
+    "rating": 3.9
   }
 ]

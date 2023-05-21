@@ -10,8 +10,6 @@ import banner8 from "../../../assets/banner/banner8.png";
 import banner9 from "../../../assets/banner/banner9.png";
 import banner10 from "../../../assets/banner/banner10.jpeg";
 import banner11 from "../../../assets/banner/banner11.jpg";
-import banner12 from "../../../assets/banner/banner12.png";
-import banner13 from "../../../assets/banner/banner13.jpg";
 import banner14 from "../../../assets/banner/banner14.jpg";
 import banner15 from "../../../assets/banner/banner15.png";
 import BannerText from "./BannerText";
@@ -19,7 +17,7 @@ import BannerText from "./BannerText";
 const Banner = () => {
   return (
     <div>
-      <div className="carousel w-full h-[600px]">
+      <div className="carousel w-full h-[600px] rounded">
         <div id="slide1" className="carousel-item relative w-full">
           <img src={banner1} className="w-full" />
           {/* <div className="absolute rounded-xl flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#2b2a2a] to-[rgba(21, 21, 21, 0)]">
@@ -164,7 +162,7 @@ const Banner = () => {
           </div>
         </div>
         <div id="slide12" className="carousel-item relative w-full">
-          <img src={banner12} className="w-full" />
+          <img src={banner14} className="w-full" />
           <BannerText></BannerText>
           <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
             <a href="#slide11" className="btn btn-circle mr-5">
@@ -176,34 +174,10 @@ const Banner = () => {
           </div>
         </div>
         <div id="slide13" className="carousel-item relative w-full">
-          <img src={banner13} className="w-full" />
-          <BannerText></BannerText>
-          <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
-            <a href="#slide12" className="btn btn-circle mr-5">
-              ❮
-            </a>
-            <a href="#slide14" className="btn btn-circle">
-              ❯
-            </a>
-          </div>
-        </div>
-        <div id="slide14" className="carousel-item relative w-full">
-          <img src={banner14} className="w-full" />
-          <BannerText></BannerText>
-          <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
-            <a href="#slide13" className="btn btn-circle mr-5">
-              ❮
-            </a>
-            <a href="#slide15" className="btn btn-circle">
-              ❯
-            </a>
-          </div>
-        </div>
-        <div id="slide15" className="carousel-item relative w-full">
           <img src={banner15} className="w-full" />
           <BannerText></BannerText>
           <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
-            <a href="#slide14" className="btn btn-circle mr-5">
+            <a href="#slide12" className="btn btn-circle mr-5">
               ❮
             </a>
             <a href="#slide1" className="btn btn-circle">

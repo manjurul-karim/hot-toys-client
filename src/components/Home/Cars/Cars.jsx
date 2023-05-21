@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-import useTitle from "../../../hooks/useTitle";
-import CarToysCard from "../../Home/Cars/CarToysCard";
-import AllToysTable from "./AllToysTable";
+import CarToysCard from "./CarToysCard";
 
-const AllToys = () => {
+const Cars = () => {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
@@ -14,13 +12,14 @@ const AllToys = () => {
   }, []);
   return (
     <div>
-      <div className=" ">
+       
+      <div className="grid grid-cols-3 gap-4 ">
         {cars.map((car) => (
-          <AllToysTable key={car._id} car={car}></AllToysTable>
+          <CarToysCard key={car._id} car={car}></CarToysCard>
         ))}
       </div>
     </div>
   );
 };
 
-export default AllToys;
+export default Cars;

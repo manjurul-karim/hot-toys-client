@@ -7,7 +7,7 @@ import office from "../../../assets/feature/office.png";
 
 const FeatureOne = () => {
   return (
-    <div>
+    <div className="px-4">
       <div className="flex justify-between mt-20 mb-12">
         <h2 className="w-1/2 font-bold text-4xl ml-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
           Why We Are the Best <br /> in the market
