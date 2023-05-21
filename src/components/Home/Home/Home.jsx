@@ -6,7 +6,7 @@ import CarToys from "./carToys";
 import FeatureOne from "../ExtraSection/FeatureOne";
 import Tabs from "../CategoryTab/CategoryTab";
 import CategoryTab from "../CategoryTab/CategoryTab";
-
+import Testimonial from "./Testimonial";
 
 const Home = () => {
   const [toys, setToys] = useState([]);
@@ -22,12 +22,9 @@ const Home = () => {
   return (
     <div className="">
       <Banner></Banner>
-      <div>
-        <div>
-          <CategoryTab></CategoryTab>
-        </div>
-      </div>
+      <CategoryTab></CategoryTab>
       <FeatureOne></FeatureOne>
+      <Testimonial></Testimonial>
     </div>
   );
 };

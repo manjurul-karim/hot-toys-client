@@ -7,7 +7,7 @@ const AddToys = () => {
 
   return (
     <div className="bg-gray-50 px-2 flex justify-center items-center h-screen ">
-      <div className="bg-gradient-to-r from-cyan-500 to-blue-500 rounded-md">
+      <div>
         <h2 className="text-center mb-12 text-2xl font-bold">Add A Toys</h2>
         <form className="flex flex-col gap-4 w-full p-4">
           <div className=" flex ">

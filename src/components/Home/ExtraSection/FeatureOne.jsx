@@ -26,11 +26,10 @@ const FeatureOne = () => {
             </div>
             <div className="">
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Noteworthy technology acquisitions 2021
+               Lowest Prices  guaranteed
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">
-                Here are the biggest enterprise technology acquisitions of 2021
-                so far, in reverse chronological order.
+               Hot toys offer their product with cheapest price.
               </p>
             </div>
           </Card>
@@ -42,11 +41,10 @@ const FeatureOne = () => {
             </div>
             <div>
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Noteworthy technology acquisitions 2021
+                Same Day Dispatch before 3pm
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">
-                Here are the biggest enterprise technology acquisitions of 2021
-                so far, in reverse chronological order.
+               oder earlier and get your product on time.
               </p>
             </div>
           </Card>
@@ -58,11 +56,10 @@ const FeatureOne = () => {
             </div>
             <div>
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Noteworthy technology acquisitions 2021
+               Rearranged Delivery If Changed Mind
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">
-                Here are the biggest enterprise technology acquisitions of 2021
-                so far, in reverse chronological order.
+                Every product we sell returnd witin 14 Day period,
               </p>
             </div>
           </Card>
@@ -74,11 +71,10 @@ const FeatureOne = () => {
             </div>
             <div>
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Noteworthy technology acquisitions 2021
+                Established 10 Years Ago
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">
-                Here are the biggest enterprise technology acquisitions of 2021
-                so far, in reverse chronological order.
+               In 2013 we moved Our Current Premises.You touch us everywhere.
               </p>
             </div>
           </Card>
