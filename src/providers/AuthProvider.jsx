@@ -41,7 +41,8 @@ const AuthProvider = ({ children }) => {
       email,
       password,
       displayName,
-      photoURL
+      photoURL,
+      loading
     );
   };
 

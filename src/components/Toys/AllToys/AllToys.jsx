@@ -13,11 +13,26 @@ const AllToys = () => {
       .catch((error) => console.log(error));
   }, []);
   return (
-    <div>
-      <div className=" ">
-        {cars.map((car) => (
-          <AllToysTable key={car._id} car={car}></AllToysTable>
-        ))}
+    <div className="overflow-x-auto w-full">
+      <div>
+        <table className="table w-full">
+          {/* head */}
+          <thead>
+            <tr>
+              <th>Picture</th>
+              <th>Name</th>
+              <th>Rating</th>
+              <th>price</th>
+              <th> button</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {cars.map((car) => (
+              <AllToysTable key={car._id} car={car}></AllToysTable>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );

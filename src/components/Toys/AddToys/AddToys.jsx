@@ -1,15 +1,61 @@
 import { Button, Label, TextInput } from "flowbite-react";
 import React from "react";
 import useTitle from "../../../hooks/useTitle";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const AddToys = () => {
   useTitle("Add A Toy");
+
+  const handleAddToy = (event) => {
+    event.preventDefault();
+    const forms = event.target;
+    const toyName = forms.toyName.value;
+    const toyPrice = forms.toyPrice.value;
+    const quantity = forms.quantity.value;
+    const SellerName = forms.SellerName.value;
+    const email = forms.email.value;
+    const subCategory = forms.subCategory.value;
+    const rating = forms.rating.value;
+    const photoURL = forms.photoURL.value;
+    const description = forms.description.value;
+    const newToy = {
+      toyName,
+      toyPrice,
+      quantity,
+      SellerName,
+      email,
+      subCategory,
+      rating,
+      photoURL,
+      description,
+    };
+    console.log(newToy);
+
+    fetch("http://localhost:5000/addedtoys", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newToy),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if(data.insertedId){
+            toast('Added Toys Successfully')
+        }
+      });
+  };
 
   return (
     <div className="bg-gray-50 px-2 flex justify-center items-center h-screen ">
       <div>
         <h2 className="text-center mb-12 text-2xl font-bold">Add A Toys</h2>
-        <form className="flex flex-col gap-4 w-full p-4">
+        <form
+          onSubmit={handleAddToy}
+          className="flex flex-col gap-4 w-full p-4"
+        >
           <div className=" flex ">
             <div className="w-1/3  mr-3">
               <div className="mb-2  ">
@@ -127,9 +173,9 @@ const AddToys = () => {
               />
             </div>
           </div>
-          <Button outline={true} gradientDuoTone="greenToBlue" type="submit">
+          <Button  outline={true} gradientDuoTone="greenToBlue" type="submit">
             Submit
-          </Button>
+          </Button> <ToastContainer />
         </form>
       </div>
     </div>

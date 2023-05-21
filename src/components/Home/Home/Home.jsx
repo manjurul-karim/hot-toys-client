@@ -12,14 +12,14 @@ import Cars from "../Cars/Cars";
 
 
 const Home = () => {
-  const [toys, setToys] = useState([]);
+  // const [toys, setToys] = useState([]);
 
-  useEffect(() => {
-    fetch("toys.json")
-      .then((res) => res.json())
-      .then((data) => console.log(data[0].toys))
-      .catch((error) => console.error(error));
-  }, []);
+  // useEffect(() => {
+  //   fetch("toys.json")
+  //     .then((res) => res.json())
+  //     .then((data) => console.log(data[0].toys))
+  //     .catch((error) => console.error(error));
+  // }, []);
 
   useTitle("Home");
   return (

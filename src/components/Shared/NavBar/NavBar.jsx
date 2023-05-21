@@ -53,7 +53,7 @@ const NavBar = () => {
           </Dropdown> */}
 
           <Link className="flex gap-2">
-            {user ? (
+            {user?.email ? (
               <>
                 <div>
                   <Tooltip content={user.displayName} placement="left">
@@ -65,28 +65,24 @@ const NavBar = () => {
                       />
                     </span>
                   </Tooltip>
-                  {/* <div
-
-                    data-tip={user.displayName}
-                  >
-                    <span>
-                      <img
-                        className="h-10 w-10 rounded-full"
-                        src={user.photoURL}
-                        alt=""
-                      />
-                    </span>
-                  </div> */}
                 </div>
-                <button className="btn btn-outline capitalize" onClick={handleLogedOut}>signOut</button>
+               
+                <button
+                  className="btn btn-outline capitalize"
+                  onClick={handleLogedOut}
+                >
+                  signOut
+                </button>
               </>
             ) : (
-              <button className="btn btn-outline capitalize"><NavLink
-              to="/login"
-              // className={({ isActive }) => (isActive ? "active" : "default")}
-            >
-              Login
-            </NavLink></button>
+              <button className="btn btn-outline capitalize">
+                <NavLink
+                  to="/login"
+                  
+                >
+                  Login
+                </NavLink>
+              </button>
             )}
           </Link>
 
@@ -97,7 +93,10 @@ const NavBar = () => {
             Home
           </NavLink>
           <NavLink to="/alltoys">All Toys</NavLink>
-          <NavLink to="/mytoys">My toys</NavLink>
+          {/* <NavLink to="/mytoys">My toys</NavLink> */}
+          {
+            user?.email?( <NavLink to="/mytoys">My toys</NavLink>): ''
+          }
           <NavLink to="/addtoys">Add a Toys</NavLink>
           <NavLink to="/blog">Blog</NavLink>
         </Navbar.Collapse>
