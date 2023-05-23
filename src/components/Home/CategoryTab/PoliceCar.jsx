@@ -5,7 +5,7 @@ const PoliceCar = () => {
     const [cars, setCars] = useState([]);
 
     useEffect(() => {
-      fetch("http://localhost:5000/allcars")
+      fetch("https://a10-hot-toys-server-manjurul-karim.vercel.app/allcars")
         .then((res) => res.json())
         .then((data) => {
           const filtereCategory = data.filter(

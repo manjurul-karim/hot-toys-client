@@ -5,7 +5,7 @@ const Cars = () => {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/allcars")
+    fetch("https://a10-hot-toys-server-manjurul-karim.vercel.app/allcars")
       .then((res) => res.json())
       .then((data) => setCars(data))
       .catch((error) => console.log(error));

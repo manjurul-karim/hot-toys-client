@@ -13,7 +13,7 @@ const MyToys = () => {
 
   useEffect(() => {
     // if (user && user.email) {
-    const url = `http://localhost:5000/addedtoys?email=${user?.email}`;
+    const url = `https://a10-hot-toys-server-manjurul-karim.vercel.app/addedtoys?email=${user?.email}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setAddedToys(data))
@@ -24,7 +24,7 @@ const MyToys = () => {
 
   const handleDelete = (_id) => {
     console.log("Delete", _id);
-    fetch(`http://localhost:5000/addedtoys/${_id}`, {
+    fetch(`https://a10-hot-toys-server-manjurul-karim.vercel.app/addedtoys/${_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

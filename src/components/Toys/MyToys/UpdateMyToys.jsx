@@ -21,7 +21,7 @@ const UpdateMyToys = () => {
     console.log(updatedToy);
     forms.reset();
 
-    fetch(`http://localhost:5000/addedtoys/${updateToy._id}`, {
+    fetch(`https://a10-hot-toys-server-manjurul-karim.vercel.app/addedtoys/${updateToy._id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

@@ -12,7 +12,8 @@ const AllToys = () => {
   const [visibleToys, setVisibleToys] = useState([]);
 
   useEffect(() => {
-    const url = "http://localhost:5000/addedtoys";
+    const url =
+      "https://a10-hot-toys-server-manjurul-karim.vercel.app/addedtoys";
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
