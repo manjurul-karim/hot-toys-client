@@ -61,14 +61,14 @@ const router = createBrowserRouter([
         element: <LoaderSpinner></LoaderSpinner>,
       },
       {
-        path: "cardetails/:id",
+        path: "/allcars/:id",
         element: (
           <PrivetRoutes>
             <CarDetails></CarDetails>
           </PrivetRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/cardetails/${params.id}`),
+          fetch(`https://a10-hot-toys-server-manjurul-karim.vercel.app/allcars/${params.id}`),
       },
       {
         path: "update/:id",

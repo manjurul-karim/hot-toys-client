@@ -7,6 +7,7 @@ import Rating from "react-rating";
 const CarDetails = () => {
   const carData = useLoaderData();
   const { picture, title, categoryName, rating, description, price } = carData;
+  
 
   return (
     <div className="w-3/4 h-screen mx-auto flex justify-center items-center">

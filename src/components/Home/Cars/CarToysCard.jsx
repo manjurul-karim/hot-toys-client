@@ -24,7 +24,7 @@ const CarToysCard = ({ car }) => {
             />
           </div>
           <div className="card-actions justify-end">
-            <Link to={`/cardetails/${_id}`}>
+            <Link to={`/allcars/${_id}`}>
               <button className="btn btn-primary">view Details</button>
             </Link>
           </div>
