@@ -18,7 +18,7 @@ const AllToysTable = ({ toys }) => {
       <td>{toyName}</td>
       <td>{toyPrice}</td>
       <td>{subCategory}</td>
-      <td>{user.displayName}</td>
+      <td>{user?.displayName}</td>
       <td>{email}</td>
       <th>
         <button className="btn btn-ghost btn-xs">Delete</button>

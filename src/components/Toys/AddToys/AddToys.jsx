@@ -1,11 +1,21 @@
 import { Button, Label, TextInput } from "flowbite-react";
-import React from "react";
+import React, { useContext } from "react";
 import useTitle from "../../../hooks/useTitle";
-import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { authContext } from "../../../providers/AuthProvider";
+import { useForm } from "react-hook-form";
 
 const AddToys = () => {
   useTitle("Add A Toy");
+  const { user } = useContext(authContext);
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => console.log(data);
 
   const handleAddToy = (event) => {
     event.preventDefault();
@@ -32,7 +42,7 @@ const AddToys = () => {
     };
     console.log(newToy);
 
-    fetch("https://a10-hot-toys-server-manjurul-karim.vercel.app/addedtoys", {
+    fetch("http://localhost:5000/addedtoys", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -42,10 +52,11 @@ const AddToys = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if(data.insertedId){
-            toast('Added Toys Successfully')
+        if (data.insertedId) {
+          toast("Added Toys Successfully");
         }
       });
+    forms.reset();
   };
 
   return (
@@ -74,8 +85,8 @@ const AddToys = () => {
                 <Label htmlFor="Toy price" value="Toy Price" />
               </div>
               <TextInput
-                id="number"
-                type="price"
+                id="toyPrice"
+                type="number"
                 name="toyPrice"
                 placeholder="Toy Price"
                 required={true}
@@ -89,8 +100,8 @@ const AddToys = () => {
                 />
               </div>
               <TextInput
-                id="number"
-                type="quantity"
+                id="quantity"
+                type="number"
                 name="quantity"
                 placeholder="Toy Quanrtity"
                 required={true}
@@ -107,6 +118,7 @@ const AddToys = () => {
                 type="name"
                 name="SellerName"
                 placeholder="Seller Name"
+                defaultValue={user?.displayName}
                 required={true}
               />
             </div>
@@ -119,6 +131,7 @@ const AddToys = () => {
                 type="email"
                 name="email"
                 placeholder="Seller Email"
+                defaultValue={user?.email}
                 required={true}
               />
             </div>
@@ -127,8 +140,8 @@ const AddToys = () => {
                 <Label htmlFor="Sub Category" value="Sub Category" />
               </div>
               <TextInput
-                id="text"
-                type="name"
+                id="subCategory"
+                type="text"
                 name="subCategory"
                 placeholder="Toy sub category"
                 required={true}
@@ -141,8 +154,8 @@ const AddToys = () => {
                 <Label htmlFor="rating" value="Rating" />
               </div>
               <TextInput
-                id="text"
-                type="name"
+                id="rating"
+                type="number"
                 name="rating"
                 placeholder="rating"
                 required={true}
@@ -153,8 +166,8 @@ const AddToys = () => {
                 <Label htmlFor="Toy PhotoURL" value="Toy PhotoURL" />
               </div>
               <TextInput
-                id="text"
-                type="name"
+                id="photoURL"
+                type="text"
                 name="photoURL"
                 placeholder="Toy PhotoURL"
                 required={true}
@@ -173,9 +186,10 @@ const AddToys = () => {
               />
             </div>
           </div>
-          <Button  outline={true} gradientDuoTone="greenToBlue" type="submit">
+          <Button outline={true} gradientDuoTone="greenToBlue" type="submit">
             Submit
-          </Button> <ToastContainer />
+          </Button>{" "}
+          <ToastContainer />
         </form>
       </div>
     </div>

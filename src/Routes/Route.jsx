@@ -43,7 +43,6 @@ const router = createBrowserRouter([
         path: "mytoys",
         element: (
           <PrivetRoutes>
-            {" "}
             <MyToys></MyToys>
           </PrivetRoutes>
         ),
@@ -64,7 +63,7 @@ const router = createBrowserRouter([
           </PrivetRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`https://a10-hot-toys-server-manjurul-karim.vercel.app/allcars/${params.id}`),
+          fetch(`http://localhost:5000/cardetails/${params.id}`),
       },
     ],
   },

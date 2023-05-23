@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { FaEdit, FaTrash } from "react-icons/fa";
+import { authContext } from "../../../providers/AuthProvider";
 
-const MyToysRow = ({ toys }) => {
-  const { toyName, toyPrice, email, photoURL, SellerName, subCategory } = toys;
+const MyToysRow = ({  toys , handleDelete }) => {
+  const { user } = useContext(authContext);
+  const { toyName, toyPrice, email, photoURL, SellerName, subCategory, _id } =
+    toys;
+
+ 
+
   return (
     <tr>
       <td>
@@ -16,11 +23,18 @@ const MyToysRow = ({ toys }) => {
       <td>{toyName}</td>
       <td>{toyPrice}</td>
       <td>{subCategory}</td>
-      <td>{SellerName}</td>
+      <td>{user?.displayName}</td>
       <td>{email}</td>
       <th>
-        <button className="btn btn-ghost btn-xs">Delete</button>
-        <button className="btn btn-ghost btn-xs">Update</button>
+        <button
+          onClick={() => handleDelete(_id)}
+          className="btn btn-ghost btn-xs text-xl text-red-600"
+        >
+          <FaTrash />
+        </button>
+        <button className="btn btn-ghost btn-xs text-xl text-blue-600">
+          <FaEdit></FaEdit>
+        </button>
       </th>
     </tr>
   );

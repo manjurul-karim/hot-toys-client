@@ -2,23 +2,39 @@ import React, { useContext, useEffect, useState } from "react";
 import useTitle from "../../../hooks/useTitle";
 import { authContext } from "../../../providers/AuthProvider";
 import MyToysRow from "./MyToysRow";
+import { useLoaderData } from "react-router-dom";
 
 const MyToys = () => {
   useTitle("My Toys");
 
   const { user } = useContext(authContext);
   const [addedToys, setAddedToys] = useState([]);
+  const toys = useLoaderData()
 
   useEffect(() => {
     // if (user && user.email) {
-    const url = `https://a10-hot-toys-server-manjurul-karim.vercel.app/addedtoys?email=${user?.email}`;
+    const url = `http://localhost:5000/addedtoys?email=${user?.email}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setAddedToys(data))
       .catch((error) => console.error(error));
     // }
   }, [user]);
+  // http://localhost:5000/addedtoys?email=${user?.email}
 
+  const handleDelete = (_id) => {
+    console.log("Delete", _id);
+    fetch(`http://localhost:5000/addedtoys/${_id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.error("Error deleting toy:", error);
+      });
+  };
   return (
     <div>
       <div className="overflow-x-auto w-full">
@@ -37,7 +53,8 @@ const MyToys = () => {
           </thead>
           <tbody>
             {addedToys.map((toys) => (
-              <MyToysRow key={toys._id} toys={toys}></MyToysRow>
+              <MyToysRow key={toys._id} toys={toys} 
+              handleDelete={handleDelete}></MyToysRow>
             ))}
           </tbody>
         </table>

@@ -107,19 +107,6 @@ const Registration = () => {
           </form>
 
           <div>
-            <h2 className="text-center text-md font-semibold ">
-              Or Register With
-            </h2>
-            <div className="flex justify-center my-4">
-              <Button
-                className="w-full"
-                outline={true}
-                gradientDuoTone="greenToBlue"
-              >
-                <BsGoogle className="mr-8"></BsGoogle>{" "}
-                <span className="text-xl hover:text-red-500">Google</span>
-              </Button>
-            </div>
             <h4 className="font-md text-md">
               Al ready Have An Acoount? Please ...{" "}
               <Link className="underline font-bold" to="/login">

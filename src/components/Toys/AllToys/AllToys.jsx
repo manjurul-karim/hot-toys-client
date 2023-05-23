@@ -12,7 +12,7 @@ const AllToys = () => {
   useEffect(() => {
     // if (user && user.email) {
     const url =
-      "https://a10-hot-toys-server-manjurul-karim.vercel.app/addedtoys";
+      "http://localhost:5000/addedtoys";
     fetch(url)
       .then((res) => res.json())
       .then((data) => setAddedToys(data))
