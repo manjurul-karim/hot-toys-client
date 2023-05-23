@@ -18,7 +18,7 @@ const RacingCar = () => {
   return (
     <div>
       <div>{/* <p>Car length:{cars.length}</p> */}</div>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid md:grid-cols-3 gap-4">
         {cars.map((car) => (
           <CarToysCard key={car._id} car={car}></CarToysCard>
         ))}

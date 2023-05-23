@@ -86,7 +86,7 @@ const FeatureOne = () => {
             </div>
           </Card>
         </div>
-        <div className="max-w-sm" data-aos="fade-up">
+        <div className="max-w-sm "  data-aos="fade-up">
           <Card className="bg-gradient-to-r from-cyan-50 to-blue-50 shadow-xl">
             <div className="flex justify-center">
               <img
@@ -100,8 +100,8 @@ const FeatureOne = () => {
                 Established 10 Years Ago
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">
-                In 2013, we moved to our current premises. You can find us
-                everywhere.
+                In 2013, we moved to our current premises. You can find us.
+                
               </p>
             </div>
           </Card>

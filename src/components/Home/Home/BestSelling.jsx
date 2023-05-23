@@ -13,7 +13,7 @@ const BestSelling = () => {
 
   return (
     <div className="flex items-center justify-evenly gap-24">
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid md:grid-cols-2 gap-3">
         <div
           className={`relative h-64 w-64 border-2 rounded-lg p-4 ${
             hoveredImage === 0 ? "hovered" : ""
