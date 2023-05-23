@@ -9,7 +9,7 @@ const MyToys = () => {
 
   const { user } = useContext(authContext);
   const [addedToys, setAddedToys] = useState([]);
-  const toys = useLoaderData()
+  const toys = useLoaderData();
 
   useEffect(() => {
     // if (user && user.email) {
@@ -20,7 +20,7 @@ const MyToys = () => {
       .catch((error) => console.error(error));
     // }
   }, [user]);
-  // http://localhost:5000/addedtoys?email=${user?.email}
+
 
   const handleDelete = (_id) => {
     console.log("Delete", _id);
@@ -30,6 +30,9 @@ const MyToys = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        if(data.deletedCount > 0){
+          alert('Toy Deleted Sucessfully')
+        }
       })
       .catch((error) => {
         console.error("Error deleting toy:", error);
@@ -45,6 +48,7 @@ const MyToys = () => {
               <th>Toy Photo</th>
               <th>Toy Name</th>
               <th>Price</th>
+              <th>Quantity</th>
               <th>Sub Category</th>
               <th>Seller Name</th>
               <th>seller email</th>
@@ -53,8 +57,11 @@ const MyToys = () => {
           </thead>
           <tbody>
             {addedToys.map((toys) => (
-              <MyToysRow key={toys._id} toys={toys} 
-              handleDelete={handleDelete}></MyToysRow>
+              <MyToysRow
+                key={toys._id}
+                toys={toys}
+                handleDelete={handleDelete}
+              ></MyToysRow>
             ))}
           </tbody>
         </table>

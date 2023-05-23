@@ -90,7 +90,8 @@ const NavBar = () => {
           <NavLink to="/alltoys">All Toys</NavLink>
           {/* <NavLink to="/mytoys">My toys</NavLink> */}
           {user?.email ? <NavLink to="/mytoys">My toys</NavLink> : ""}
-          <NavLink to="/addtoys">Add a Toys</NavLink>
+          {user?.email ? <NavLink to="/addtoys">Add a Toys</NavLink> : ""}
+          {/* <NavLink to="/addtoys">Add a Toys</NavLink> */}
           <NavLink to="/blog">Blog</NavLink>
         </Navbar.Collapse>
       </Navbar>

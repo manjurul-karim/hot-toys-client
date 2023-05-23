@@ -4,6 +4,7 @@ import { BsGoogle } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import useTitle from "../../../hooks/useTitle";
 import { authContext } from "../../../providers/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
 
 const Registration = () => {
   useTitle("Register");
@@ -40,6 +41,9 @@ const Registration = () => {
       .catch((error) => {
         setError(error.message);
       });
+      if (createUser) {
+        toast("User Created Successfully");
+      }
   };
   const handleAccepted = (event) => {
     setAccepted(event.target.checked);
@@ -104,6 +108,7 @@ const Registration = () => {
             <Button outline={true} gradientDuoTone="greenToBlue" type="submit">
               Registration
             </Button>
+            <ToastContainer/>
           </form>
 
           <div>

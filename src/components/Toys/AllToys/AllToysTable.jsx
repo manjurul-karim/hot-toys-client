@@ -3,10 +3,10 @@ import { authContext } from "../../../providers/AuthProvider";
 
 const AllToysTable = ({ toys }) => {
   const { user } = useContext(authContext);
-  const { toyName, toyPrice, email, photoURL, SellerName, subCategory } = toys;
+  const { toyName, toyPrice, email, photoURL, subCategory, quantity } = toys;
   return (
     <tr className="border-2">
-      <td >
+      <td>
         <div className="flex items-center space-x-3">
           <div className="avatar">
             <div className="mask mask-squircle w-12 h-12">
@@ -17,12 +17,11 @@ const AllToysTable = ({ toys }) => {
       </td>
       <td>{toyName}</td>
       <td>{toyPrice}</td>
+      <td>{quantity}</td>
       <td>{subCategory}</td>
-      <td>{user?.displayName}</td>
       <td>{email}</td>
       <th>
-        <button className="btn btn-ghost btn-xs">Delete</button>
-        <button className="btn btn-ghost btn-xs">Update</button>
+        <button className="btn btn-primary btn-outline btn-xs">Detail</button>
       </th>
     </tr>
   );

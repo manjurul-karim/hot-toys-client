@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { BsGoogle } from "react-icons/bs";
 import useTitle from "../../../hooks/useTitle";
 import { authContext } from "../../../providers/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
 
 const Login = () => {
   useTitle("Login");
@@ -36,6 +37,9 @@ const Login = () => {
       .catch((error) => {
         setError(error.message);
       });
+      if(signIn){
+        toast('User Logging Sucessfully')
+      }
   };
 
   const handleGoogleSignIn = () => {
@@ -100,6 +104,7 @@ const Login = () => {
                 <BsGoogle className="mr-8"></BsGoogle>{" "}
                 <span className="text-xl hover:text-red-500">Google</span>
               </Button>
+              <ToastContainer/>
             </div>
             <h4 className="font-md text-md">
               New To Here? Please ...{" "}

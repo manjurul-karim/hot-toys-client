@@ -12,6 +12,7 @@ import AddToys from "../components/Toys/AddToys/AddToys";
 import LoaderSpinner from "../Loader/LoaderSpinner";
 import PrivetRoutes from "./PrivetRoutes";
 import CarDetails from "../components/Home/Cars/CarDetails";
+import UpdateMyToys from "../components/Toys/MyToys/UpdateMyToys";
 
 const router = createBrowserRouter([
   {
@@ -49,7 +50,11 @@ const router = createBrowserRouter([
       },
       {
         path: "addtoys",
-        element: <AddToys></AddToys>,
+        element: (
+          <PrivetRoutes>
+            <AddToys></AddToys>
+          </PrivetRoutes>
+        ),
       },
       {
         path: "loader",
@@ -64,6 +69,12 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/cardetails/${params.id}`),
+      },
+      {
+        path: "update/:id",
+        element: <UpdateMyToys></UpdateMyToys>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/addedtoys/${params.id}`),
       },
     ],
   },

@@ -53,7 +53,7 @@ const AddToys = () => {
       .then((data) => {
         console.log(data);
         if (data.insertedId) {
-          toast("Added Toys Successfully");
+          toast("Added Toy Successfully");
         }
       });
     forms.reset();
