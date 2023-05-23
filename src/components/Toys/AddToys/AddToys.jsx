@@ -32,7 +32,7 @@ const AddToys = () => {
     };
     console.log(newToy);
 
-    fetch("http://localhost:5000/addedtoys", {
+    fetch("https://a10-hot-toys-server-manjurul-karim.vercel.app/addedtoys", {
       method: "POST",
       headers: {
         "content-type": "application/json",

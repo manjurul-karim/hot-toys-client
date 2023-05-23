@@ -1,35 +1,44 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import useTitle from "../../../hooks/useTitle";
 import CarToysCard from "../../Home/Cars/CarToysCard";
 import AllToysTable from "./AllToysTable";
+import MyToysRow from "../MyToys/MyToysRow";
+import { authContext } from "../../../providers/AuthProvider";
 
 const AllToys = () => {
-  const [cars, setCars] = useState([]);
+  const { user } = useContext(authContext);
+  const [addedToys, setAddedToys] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/allcars")
+    // if (user && user.email) {
+    const url =
+      "https://a10-hot-toys-server-manjurul-karim.vercel.app/addedtoys";
+    fetch(url)
       .then((res) => res.json())
-      .then((data) => setCars(data))
-      .catch((error) => console.log(error));
-  }, []);
+      .then((data) => setAddedToys(data))
+      .catch((error) => console.error(error));
+    // }
+  }, [user]);
+
   return (
-    <div className="overflow-x-auto w-full">
-      <div>
+    <div className="">
+      <div className="overflow-x-auto w-full">
         <table className="table w-full">
           {/* head */}
           <thead>
             <tr>
-              <th>Picture</th>
-              <th>Name</th>
-              <th>Rating</th>
-              <th>price</th>
-              <th> button</th>
+              <th>Toy Photo</th>
+              <th>Toy Name</th>
+              <th>Price</th>
+              <th>Sub Category</th>
+              <th>Seller Name</th>
+              <th>seller email</th>
+              <th>Delete/update</th>
             </tr>
           </thead>
-
-          <tbody>
-            {cars.map((car) => (
-              <AllToysTable key={car._id} car={car}></AllToysTable>
+          <tbody className="border-4 bg-red-600">
+            {addedToys.map((toys) => (
+              <AllToysTable key={toys._id} toys={toys}></AllToysTable>
             ))}
           </tbody>
         </table>

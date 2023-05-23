@@ -13,7 +13,6 @@ const Login = () => {
   const { signIn, signInWithGoogle } = useContext(authContext);
   const navigate = useNavigate();
   const location = useLocation();
-
   const from = location.state?.from?.pathname || "/";
 
   const handleLogIn = (event) => {

@@ -15,7 +15,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className=" bg-[bg-[#1C3F3A]]">
+    <div className=" bg-[#1C3F3A]">
       <Navbar fluid={true} rounded={true}>
         <Link className="flex" to="/">
           <img src={logo} className="mr-3 h-6 sm:h-9" alt="Hot toys Logo" />
@@ -66,7 +66,7 @@ const NavBar = () => {
                     </span>
                   </Tooltip>
                 </div>
-               
+
                 <button
                   className="btn btn-outline capitalize"
                   onClick={handleLogedOut}
@@ -76,12 +76,7 @@ const NavBar = () => {
               </>
             ) : (
               <button className="btn btn-outline capitalize">
-                <NavLink
-                  to="/login"
-                  
-                >
-                  Login
-                </NavLink>
+                <NavLink to="/login">Login</NavLink>
               </button>
             )}
           </Link>
@@ -94,9 +89,7 @@ const NavBar = () => {
           </NavLink>
           <NavLink to="/alltoys">All Toys</NavLink>
           {/* <NavLink to="/mytoys">My toys</NavLink> */}
-          {
-            user?.email?( <NavLink to="/mytoys">My toys</NavLink>): ''
-          }
+          {user?.email ? <NavLink to="/mytoys">My toys</NavLink> : ""}
           <NavLink to="/addtoys">Add a Toys</NavLink>
           <NavLink to="/blog">Blog</NavLink>
         </Navbar.Collapse>

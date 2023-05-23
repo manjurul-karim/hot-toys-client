@@ -21,7 +21,7 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const createUser =async (email, password, displayName, photoURL) => {
+  const createUser = async (email, password, displayName, photoURL) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {

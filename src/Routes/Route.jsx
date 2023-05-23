@@ -11,6 +11,7 @@ import MyToys from "../components/Toys/MyToys/MyToys";
 import AddToys from "../components/Toys/AddToys/AddToys";
 import LoaderSpinner from "../Loader/LoaderSpinner";
 import PrivetRoutes from "./PrivetRoutes";
+import CarDetails from "../components/Home/Cars/CarDetails";
 
 const router = createBrowserRouter([
   {
@@ -35,21 +36,36 @@ const router = createBrowserRouter([
         element: <Blog></Blog>,
       },
       {
-        path: 'alltoys',
-        element:<AllToys></AllToys>
+        path: "alltoys",
+        element: <AllToys></AllToys>,
       },
       {
-        path: 'mytoys',
-        element:<PrivetRoutes> <MyToys></MyToys></PrivetRoutes>
+        path: "mytoys",
+        element: (
+          <PrivetRoutes>
+            {" "}
+            <MyToys></MyToys>
+          </PrivetRoutes>
+        ),
       },
       {
-        path: 'addtoys',
-        element: <AddToys></AddToys>
+        path: "addtoys",
+        element: <AddToys></AddToys>,
       },
       {
-        path:'loader',
-        element:<LoaderSpinner></LoaderSpinner>
-      }
+        path: "loader",
+        element: <LoaderSpinner></LoaderSpinner>,
+      },
+      {
+        path: "cardetails/:id",
+        element: (
+          <PrivetRoutes>
+            <CarDetails></CarDetails>
+          </PrivetRoutes>
+        ),
+        loader: ({ params }) =>
+          fetch(`https://a10-hot-toys-server-manjurul-karim.vercel.app/allcars/${params.id}`),
+      },
     ],
   },
 ]);

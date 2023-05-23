@@ -1,11 +1,19 @@
-import React from 'react';
+import React from "react";
+import { useLoaderData } from "react-router-dom";
 
 const CarDetails = () => {
-    return (
-        <div>
-            <h2>This is Car Details</h2>
-        </div>
-    );
+  const cars = useLoaderData();
+
+  
+
+  const { title, price, picture, _id } = cars;
+  return (
+    <div>
+      <h2>
+        My Car Name Is:{title} : car {picture}{" "}
+      </h2>
+    </div>
+  );
 };
 
 export default CarDetails;

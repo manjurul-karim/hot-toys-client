@@ -11,7 +11,7 @@ const MyToys = () => {
 
   useEffect(() => {
     // if (user && user.email) {
-    const url = `http://localhost:5000/addedtoys?email=${user?.email}`;
+    const url = `https://a10-hot-toys-server-manjurul-karim.vercel.app/addedtoys?email=${user?.email}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setAddedToys(data))
