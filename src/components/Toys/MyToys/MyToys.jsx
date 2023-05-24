@@ -21,17 +21,19 @@ const MyToys = () => {
     // }
   }, [user]);
 
-
   const handleDelete = (_id) => {
     console.log("Delete", _id);
-    fetch(`https://a10-hot-toys-server-manjurul-karim.vercel.app/addedtoys/${_id}`, {
-      method: "DELETE",
-    })
+    fetch(
+      `https://a10-hot-toys-server-manjurul-karim.vercel.app/addedtoys/${_id}`,
+      {
+        method: "DELETE",
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if(data.deletedCount > 0){
-          alert('Toy Deleted Sucessfully')
+        if (data.deletedCount > 0) {
+          alert("Toy Deleted Sucessfully");
         }
       })
       .catch((error) => {
