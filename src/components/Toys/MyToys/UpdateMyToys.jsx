@@ -21,13 +21,16 @@ const UpdateMyToys = () => {
     console.log(updatedToy);
     forms.reset();
 
-    fetch(`https://a10-hot-toys-server-manjurul-karim.vercel.app/addedtoys/${updateToy._id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(updatedToy),
-    })
+    fetch(
+      `https://a10-hot-toys-server-manjurul-karim.vercel.app/addedtoys/${updateToy._id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updatedToy),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -50,7 +53,6 @@ const UpdateMyToys = () => {
                 type="number"
                 name="toyPrice"
                 placeholder="Toy Price"
-                required={true}
               />
             </div>
             <div>
@@ -62,7 +64,6 @@ const UpdateMyToys = () => {
                 type="number"
                 name="quantity"
                 placeholder="Toy Quantity"
-                required={true}
               />
             </div>
             <div>
@@ -74,7 +75,6 @@ const UpdateMyToys = () => {
                 type="text"
                 name="description"
                 placeholder="Toy Desscription"
-                required={true}
               />
             </div>
 

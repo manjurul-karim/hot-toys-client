@@ -1,9 +1,12 @@
 import React, { useContext } from "react";
 import { authContext } from "../../../providers/AuthProvider";
+import Modal from "./Modal";
+import { Link } from "react-router-dom";
 
 const AllToysTable = ({ toys }) => {
   const { user } = useContext(authContext);
-  const { toyName, toyPrice, email, photoURL, subCategory, quantity } = toys;
+  const { toyName, toyPrice, email, photoURL, subCategory, quantity, _id } =
+    toys;
   return (
     <tr className="border-2">
       <td>
@@ -20,9 +23,13 @@ const AllToysTable = ({ toys }) => {
       <td>{quantity}</td>
       <td>{subCategory}</td>
       <td>{email}</td>
-      <th>
-        <button className="btn btn-primary btn-outline btn-xs">Detail</button>
-      </th>
+      <td>
+        <Link to={`/toysDetails/${_id}`}>
+          {" "}
+          <button className="btn btn-outline btn-primary"> Details</button>{" "}
+          
+        </Link>
+      </td>
     </tr>
   );
 };

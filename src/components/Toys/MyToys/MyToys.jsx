@@ -50,7 +50,7 @@ const MyToys = () => {
               <th>Price</th>
               <th>Quantity</th>
               <th>Sub Category</th>
-              <th>Seller Name</th>
+              {/* <th>Seller Name</th> */}
               <th>seller email</th>
               <th>Delete/update</th>
             </tr>

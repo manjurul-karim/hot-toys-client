@@ -7,9 +7,9 @@ const CarToysCard = ({ car }) => {
   const { title, price, picture, _id ,rating } = car;
   return (
     <div>
-      <div className="card w-96 glass shadow-2xl">
-        <figure className="h-64 p-4 rounded border-lg">
-          <img src={picture} alt="car!" />
+      <div className="card  w-96 glass shadow-2xl">
+        <figure className=" p-4 rounded border-lg">
+          <img  className="h-72 p-2 w-full rounded-lg border-2" src={picture} alt="car!" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{title}</h2>

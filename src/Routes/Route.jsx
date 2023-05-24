@@ -13,6 +13,7 @@ import LoaderSpinner from "../Loader/LoaderSpinner";
 import PrivetRoutes from "./PrivetRoutes";
 import CarDetails from "../components/Home/Cars/CarDetails";
 import UpdateMyToys from "../components/Toys/MyToys/UpdateMyToys";
+import Modal from "../components/Toys/AllToys/Modal";
 
 const router = createBrowserRouter([
   {
@@ -76,6 +77,12 @@ const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`https://a10-hot-toys-server-manjurul-karim.vercel.app/addedtoys/${params.id}`),
       },
+      {
+        path: 'toysDetails/:id',
+        element: <Modal></Modal>,
+        loader: ({ params }) =>
+        fetch(`http://localhost:5000/toysdetails/${params.id}`),
+      }
     ],
   },
 ]);

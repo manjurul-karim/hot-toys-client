@@ -25,7 +25,7 @@ const MyToysRow = ({  toys , handleDelete }) => {
       <td>{toyPrice}</td>
       <td>{quantity}</td>
       <td>{subCategory}</td>
-      <td>{user?.displayName}</td>
+      {/* <td>{user?.displayName}</td> */}
       <td>{email}</td>
       <th>
         <button
